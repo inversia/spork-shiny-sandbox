@@ -1,0 +1,76 @@
+{
+    "name": "git-job",
+    "version": "1.0.2",
+    "private": true,
+    "engines": {
+        "node": ">=15.8.0",
+        "npm": ">=7.5.1"
+    },
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "npm run prebuild && rm -rf dist .cache && NODE_ENV=test parcel src/index.html",
+        "build": "npm run prebuild && rm -rf dist .cache && NODE_ENV=prod parcel build src/*.html",
+        "build:image": "docker build -f web.Dockerfile -t registry.git-job.com/client.git-job .",
+        "push:image": "docker push registry.git-job.com/client.git-job",
+        "start:test": "npm run l10n && rm -rf dist .cache && NODE_ENV=test parcel src/index.html",
+        "start:dev": "npm run l10n && rm -rf dist .cache && NODE_ENV=dev parcel src/index.html",
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "download-faces": "cd src/Testimonials && node downloadFaces.mjs",
+        "lint": "npx eslint src --ext .js,.jsx,.ts,.tsx,.mjs",
+        "l10n": "./l10n.parser.mjs",
+        "prebuild": "./l10n.parser.mjs && ./documents.generator.mjs",
+        "typecheck": "tsc --noEmit --skipLibCheck"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/SporkHubr/git-job.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/SporkHubr/git-job/issues"
+    },
+    "homepage": "https://github.com/SporkHubr/git-job#readme",
+    "alias": {
+        "~": "./src",
+        "Common": "./src/Common"
+    },
+    "dependencies": {
+        "caniuse-lite": "^1.0.30001129",
+        "classnames": "^2.2.6",
+        "hookrouter": "^1.2.5",
+        "lodash": "^4.17.20",
+        "lodash.debounce": "^4.0.8",
+        "panic-overlay": "^1.0.42",
+        "react": "^16.13.1",
+        "react-dom": "^16.13.1",
+        "react-material-ripple": "^0.1.1",
+        "react-router-dom": "^5.2.0",
+        "react-transition-group": "^4.4.1",
+        "use-onclickoutside": "^0.3.1"
+    },
+    "devDependencies": {
+        "@types/classnames": "^2.2.10",
+        "@types/lodash.debounce": "^4.0.6",
+        "@types/node": "^13.13.4",
+        "@types/react": "^16.9.34",
+        "@types/react-dom": "^16.9.6",
+        "@types/react-router-dom": "^5.1.7",
+        "@types/react-transition-group": "^4.4.0",
+        "@typescript-eslint/eslint-plugin": "^3.5.0",
+        "@typescript-eslint/parser": "^3.5.0",
+        "autoprefixer": "^9.8.1",
+        "browserslist": "4.14.2",
+        "eslint": "^7.19.0",
+        "eslint-config-prettier": "^7.2.0",
+        "eslint-plugin-react": "^7.20.2",
+        "eslint-plugin-react-hooks": "^4.2.0",
+        "marked": "^1.2.2",
+        "parcel": "^1.12.4",
+        "parcel-plugin-svg-react": "^1.0.3",
+        "postcss-modules": "^2.0.0",
+        "sass": "^1.32.7",
+        "typescript": "^4.1.3"
+    }
+}
