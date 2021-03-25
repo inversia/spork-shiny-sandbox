@@ -1,0 +1,22 @@
+.tags-wrapper {
+    display: flex;
+    // padding-top: 1em;
+    overflow-x: scroll;
+    background: linear-gradient(to right, #e6646400 93%, #ffffff);
+    position: relative;
+
+    &::scrollbar {
+        display: none;
+    }
+
+    dt {
+        padding: 1vh;
+        margin-right: 0.55em;
+        background-color: #f1f3f9;
+        border-radius: 0.4vw;
+        font-size: 90%;
+        position: relative;
+        z-index: -1;
+        color: rgba(0, 0, 0, 0.651);
+    }
+}

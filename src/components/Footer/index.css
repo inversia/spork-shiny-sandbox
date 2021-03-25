@@ -1,0 +1,126 @@
+.footer-container {
+    display: flex;
+    height: 23.047vw;
+    width:100%;
+    background-color: #F4F4F4;
+    justify-content: center;
+    padding: 7vw 0vw;
+}
+
+    .footer-info-wrapper {
+        width: 88%;
+        position: relative;
+        /* border:solid pink 1px; */
+        display: flex;
+        align-content: center;
+        /* justify-content: center; */
+        flex-direction: column;
+        font-family: Open Sans;
+        color:#6C6C6C;
+    }
+
+    .footer-info-wrapper * {
+        /* transform: scale(1.05); */
+    }
+
+        .footer-logo img {
+            height: 2.01vw;
+            /* border: pink solid 1px; */
+        }
+
+        .footer-contacts {
+            /* padding-top:5vw; */
+            display: flex;
+            position: absolute;
+            bottom: 0vw;
+            left:0;
+            /* border: pink solid 1px; */
+        }
+
+        .footer-contacts * {
+            padding-right: 1.5vw;
+            cursor: pointer;
+            width: 3.13vw;
+            height: 3.13vw;
+        }
+
+        .footer-info {
+            position: absolute;
+            right:0;
+            bottom: 0;
+        }
+
+        .footer-info * {
+            padding-left: 5.0vw;
+            cursor: pointer;
+            font-size:1.094vw;
+            letter-spacing: 0.023vw;
+            font-weight: normal;
+        }
+
+        .footer-info a {
+            color: #6C6C6C;
+            text-decoration: none;
+        }
+
+        .copyright::before {
+            content: '\00a9';
+            margin-right: 0.25em;
+        }
+
+@media (min-aspect-ratio: 16/7) { 
+    
+    .footer-container {
+        display: flex;
+        height: 18.047vw;
+        width:100%;
+        background-color: #F4F4F4;
+        justify-content: center;
+        padding: var(--mega-padding);
+        padding-top: 5vw;
+        padding-bottom: 5vw;
+    }
+    
+        .footer-info-wrapper {
+            width: 100%;
+            position: relative;
+            /* border:solid pink 1px; */
+            display: flex;
+            align-content: center;
+            /* justify-content: center; */
+            flex-direction: column;
+            font-family: Open Sans;
+            color:#6C6C6C;
+        }
+
+        .footer-logo img {
+            height: 1.5vw;
+        }
+
+        .footer-contacts {
+            display: flex;
+            position: absolute;
+            bottom: 0vw;
+            left:0;
+        }
+
+        .footer-contacts * {
+            padding-right: 1.5vw;
+            cursor: pointer;
+            width: 2.3vw;
+            height: 2.3vw;
+            transform:scale(1);
+            transition: transform 0.25s ease-in;
+            
+        }
+
+        .footer-contacts img:hover{
+            transform:scale(1.15);
+        }
+
+        .footer-info * {
+            padding-left: 3.0vw;
+            font-size:0.94vw;
+            letter-spacing: 0.023vw;
+        }
+}

@@ -1,0 +1,90 @@
+.button {
+    border-radius: 0.3125vw;
+    box-shadow: 0 0 0.78125vw rgba(27, 64, 105, 0.2);
+    background-color: var(--turquoise);
+    /* font: font-style font-variant font-weight font-size/line-height font-family; */
+    font: normal 500 1.40625vw/1.875vw 'Roboto', sans-serif;
+    letter-spacing: 0.0125vw;
+    text-transform: uppercase;
+    font-feature-settings: 'pnum' on, 'lnum' on;
+    transition: background-color 0.35s ease-in-out;
+
+    a {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        position: relative;
+        color: #fff;
+        font: inherit;
+        letter-spacing: inherit;
+        text-transform: inherit;
+        font-feature-settings: inherit;
+        user-select: none;
+    }
+
+    &.click-animation {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .title {
+        flex: 1;
+        display: inline-block;
+        text-align: center;
+        color: inherit;
+        font: inherit;
+        letter-spacing: inherit;
+        text-transform: inherit;
+        font-feature-settings: inherit;
+    }
+
+    &.inverted .title {
+        color: var(--turquoise);
+    }
+
+    &:hover {
+        background-color: #67dcba;
+    }
+
+    &.inverted:hover {
+        background-color: #f5fffc;
+    }
+
+    .icon {
+        display: inline-block;
+        border-right: 0.078125vw solid #fff;
+        height: 100%;
+        position: relative;
+
+        i {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            mask-repeat: no-repeat;
+            mask-position: center;
+            mask-size: 1.8015625vw 1.68359375vw;
+            background-color: #fff;
+        }
+
+        img {
+            /* a workaround required to preserve icon aspect ratio of 1:1 based on the button height */
+            height: 100%;
+            width: auto;
+            visibility: hidden;
+            position: relative;
+        }
+    }
+
+    &.inverted .icon {
+        border-right-color: var(--turquoise);
+        border-right: 0.105vw solid var(--turquoise);
+
+        i {
+            background-color: var(--turquoise);
+            /* padding-bottom: 0.15625vw; */
+        }
+    }
+}

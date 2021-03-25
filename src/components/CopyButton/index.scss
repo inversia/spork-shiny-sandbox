@@ -1,0 +1,11 @@
+.copy-button {
+    height: 100%;
+    width: 100%;
+    mask-image: url(~/icons/save-email.svg);
+    mask-position: center;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    cursor: pointer;
+    outline: none;
+    display: block;
+}

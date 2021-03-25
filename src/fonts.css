@@ -1,0 +1,50 @@
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 700;
+    font-style: normal;
+    src: url('~/fonts/open-sans-v17-latin_cyrillic-700.woff2') format('woff2'),
+        url('~/fonts/open-sans-v17-latin_cyrillic-700.woff') format('woff'),
+        url('~/fonts/open-sans-v17-latin_cyrillic-700.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    font-weight: 400;
+    font-style: normal;
+    src: url('~/fonts/open-sans-v17-latin_cyrillic-regular.woff2') format('woff2'),
+        url('~/fonts/open-sans-v17-latin_cyrillic-regular.woff') format('woff'),
+        url('~/fonts/open-sans-v17-latin_cyrillic-regular.ttf') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-style: normal;
+    src: url('~/fonts/roboto-v20-latin_cyrillic-500.woff2'),
+        url('~/fonts/roboto-v20-latin_cyrillic-500.woff'),
+        url('~/fonts/roboto-v20-latin_cyrillic-500.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-style: normal;
+    src: url('~/fonts/roboto-v20-latin_cyrillic-regular.woff2'),
+        url('~/fonts/roboto-v20-latin_cyrillic-regular.woff'),
+        url('~/fonts/roboto-v20-latin_cyrillic-regular.ttf');
+}
+
+@font-face {
+    font-family: 'Manrope';
+    font-weight: 500;
+    font-style: normal;
+    src: url('~/fonts/Manrope-VariableFont_wght.ttf') format('ttf');
+}
+
+/* @import url('https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=cyrillic'); */
+/* @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap&subset=cyrillic'); */
+
+/* https://google-webfonts-helper.herokuapp.com/fonts */
+/* https://github.com/majodev/google-webfonts-helper#rest-api */
+/* https://google-webfonts-helper.herokuapp.com/api/fonts/roboto?download=zip&subsets=latin,cyrillic&variants=400,500&formats=woff,woff2 */
+/* https://google-webfonts-helper.herokuapp.com/api/fonts/open-sans?download=zip&subsets=latin,cyrillic&variants=400,700&formats=woff,woff2 */
