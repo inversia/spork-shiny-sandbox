@@ -18,20 +18,20 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "download-faces": "cd src/Testimonials && node downloadFaces.mjs",
         "lint": "npx eslint src --ext .js,.jsx,.ts,.tsx,.mjs",
-        "l10n": "./l10n.parser.mjs",
-        "prebuild": "./l10n.parser.mjs && ./documents.generator.mjs",
+        "l10n": "node ./l10n.parser.mjs",
+        "prebuild": "npm run l10n && node ./documents.generator.mjs",
         "typecheck": "tsc --noEmit --skipLibCheck"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/SporkHubr/git-job.git"
+        "url": "git+https://github.com/inversia/spork-shiny-sandbox.git"
     },
     "author": "",
     "license": "ISC",
     "bugs": {
-        "url": "https://github.com/SporkHubr/git-job/issues"
+        "url": "https://github.com/inversia/spork-shiny-sandbox/issues"
     },
-    "homepage": "https://github.com/SporkHubr/git-job#readme",
+    "homepage": "https://github.com/inversia/spork-shiny-sandbox#readme",
     "alias": {
         "~": "./src",
         "Common": "./src/Common"
